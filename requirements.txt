@@ -1,0 +1,17 @@
+openai
+ollama
+strands-agents[ollama]
+strands-agents[llamaapi]
+strands-agents
+strands-agents-tools
+bedrock-agentcore
+uvicorn
+psycopg2-binary
+fastapi
+httpx
+pydantic
+boto3
+locust
+google-genai
+mcp
+
