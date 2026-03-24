@@ -8,7 +8,7 @@ from strands.models import BedrockModel
 # 1. Setup parameters to run the local server script
 server_params = StdioServerParameters(
     command=sys.executable,
-    args=["bedrock_mysql_server.py"]
+    args=["mysql_server.py"]
 )
 
 # 2. Initialize the MCP Client
@@ -40,17 +40,17 @@ def run_db_agent():
 
         print(f"Agent Analysis: {str(result)}")
 
-        # while True:
+        while True:
 
-        #     user_input = input("You: ")
-        #     if not user_input:
-        #         continue
+            user_input = input("You: ")
+            if not user_input:
+                continue
 
-        #     if user_input.lower() in ["quit", "exit", "bye"]:
-        #         break
+            if user_input.lower() in ["quit", "exit", "bye"]:
+                break
 
-        #     result = agent(user_input)
-        #     print(f"\n\nAgent: {result}")
+            result = agent(user_input)
+            print(f"\n\nAgent: {result}")
 
 
 if __name__ == "__main__":
